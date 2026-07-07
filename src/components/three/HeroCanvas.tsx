@@ -6,8 +6,11 @@ import { Billboard, Float, Sparkles } from "@react-three/drei";
 import * as THREE from "three";
 import { techLogos, type TechLogo } from "@/data/techLogos";
 
-// Distribute N points evenly on a sphere (fibonacci)
-function fibonacciSphere(count: number, radius: number) {
+// Distribute N points evenly on a sphere (fibonacci).
+// yFlatten squashes the sphere vertically (oblate) so the pole cards
+// (first/last index) don't sit at the extreme top/bottom and get clipped
+// by the canvas edge — full horizontal spread is preserved.
+function fibonacciSphere(count: number, radius: number, yFlatten = 0.72) {
   const points: [number, number, number][] = [];
   const golden = Math.PI * (3 - Math.sqrt(5));
   for (let i = 0; i < count; i++) {
@@ -16,7 +19,7 @@ function fibonacciSphere(count: number, radius: number) {
     const theta = golden * i;
     points.push([
       Math.cos(theta) * r * radius,
-      y * radius,
+      y * radius * yFlatten,
       Math.sin(theta) * r * radius,
     ]);
   }
@@ -51,15 +54,17 @@ function useLogoTexture(logo: TechLogo) {
     ctx.stroke();
 
     // logo glyph, centered
-    const pad = size * 0.26;
+    const pad = size * 0.22;
     const inner = size - pad * 2;
     ctx.save();
     ctx.translate(pad, pad);
     ctx.scale(inner / 24, inner / 24);
     ctx.fillStyle = logo.color;
     ctx.shadowColor = logo.color;
-    ctx.shadowBlur = 6;
-    ctx.fill(new Path2D(logo.path));
+    ctx.shadowBlur = 2;
+    // evenodd so square-background icons (e.g. JavaScript) cut their holes
+    // instead of filling as a flat block
+    ctx.fill(new Path2D(logo.path), "evenodd");
     ctx.restore();
 
     const texture = new THREE.CanvasTexture(canvas);
@@ -117,7 +122,7 @@ function LogoCard({
 function LogoCloud() {
   const group = useRef<THREE.Group>(null);
   const positions = useMemo(
-    () => fibonacciSphere(techLogos.length, 2.55),
+    () => fibonacciSphere(techLogos.length, 2.2),
     []
   );
   useFrame((_, delta) => {
@@ -157,7 +162,7 @@ function CoreGlow() {
 export default function HeroCanvas() {
   return (
     <Canvas
-      camera={{ position: [0, 0, 6], fov: 45 }}
+      camera={{ position: [0, 0, 7.5], fov: 45 }}
       dpr={[1, 2]}
       gl={{ antialias: true, alpha: true }}
     >
