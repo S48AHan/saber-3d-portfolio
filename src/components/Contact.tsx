@@ -27,8 +27,10 @@ export default function Contact() {
             <span className="text-gradient">great</span>
           </h2>
           <p className="mx-auto mb-8 max-w-xl text-slate-300">
-            Have a project in mind or just want to say hi? My inbox is always
-            open — I&apos;ll get back to you as soon as I can.
+            Need help building your website, web app or product? I take on
+            freelance and remote projects — from landing pages to full
+            React / Next.js applications. Send me a message and I&apos;ll get
+            back to you as soon as I can.
           </p>
 
           <a

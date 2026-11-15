@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/data/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,18 +16,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Saber Ahmed — Software Engineer",
-  description:
-    "Frontend-focused Software Engineer building scalable, interactive web applications with React, Next.js, TypeScript, Three.js and modern web technologies.",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   keywords: [
     "Saber Ahmed",
+    "hire React developer",
+    "hire Next.js developer",
+    "freelance web developer",
+    "freelance frontend developer",
+    "web developer Bangladesh",
+    "web developer Dhaka",
+    "remote frontend developer",
+    "build my website",
+    "web app development",
     "Software Engineer",
-    "Frontend Developer",
     "React",
     "Next.js",
     "Three.js",
     "TypeScript",
   ],
+  authors: [{ name: "Saber Ahmed", url: SITE_URL }],
+  creator: "Saber Ahmed",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Saber Ahmed",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
