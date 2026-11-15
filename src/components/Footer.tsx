@@ -1,4 +1,5 @@
-import { Code2, Mail } from "lucide-react";
+import Image from "next/image";
+import { Mail } from "lucide-react";
 import { GithubIcon, LeetcodeIcon, LinkedinIcon } from "./BrandIcons";
 import { socials } from "@/data/experience";
 
@@ -6,13 +7,14 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-background px-6 py-10 lg:px-20">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row">
-        <a href="#top" className="flex items-center gap-2">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-linear-to-br from-indigo-500 to-cyan-400 text-white">
-            <Code2 className="h-4 w-4" />
-          </span>
-          <span className="text-sm font-semibold text-white">
-            Saber<span className="text-gradient">.dev</span>
-          </span>
+        <a href="#top" aria-label="Saber.dev — back to top" className="flex items-center opacity-90 transition hover:opacity-100">
+          <Image
+            src="/logo-on-dark.svg"
+            alt="Saber.dev"
+            width={106}
+            height={24}
+            className="h-6 w-auto"
+          />
         </a>
 
         {/* <p className="text-sm text-slate-400">

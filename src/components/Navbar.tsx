@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Code2, Menu, X } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 const links = [
   { label: "About", href: "#about" },
@@ -34,13 +35,15 @@ export default function Navbar() {
           scrolled ? "glass shadow-lg shadow-black/30" : "bg-transparent"
         }`}
       >
-        <a href="#top" className="flex items-center gap-2 font-semibold">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-linear-to-br from-indigo-500 to-cyan-400 text-white">
-            <Code2 className="h-5 w-5" />
-          </span>
-          <span className="text-sm tracking-tight text-white">
-            Saber<span className="text-gradient">.dev</span>
-          </span>
+        <a href="#top" aria-label="Saber.dev — back to top" className="flex items-center">
+          <Image
+            src="/logo-on-dark.svg"
+            alt="Saber.dev"
+            width={123}
+            height={28}
+            priority
+            className="h-7 w-auto"
+          />
         </a>
 
         <ul className="hidden items-center gap-1 md:flex">

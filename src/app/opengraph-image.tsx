@@ -1,10 +1,13 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 export const alt = "Saber Ahmed — Freelance React & Next.js Developer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function Image() {
+export default async function Image() {
+  const logo = await readFile(join(process.cwd(), "public/logo-on-dark.svg"), "base64");
   return new ImageResponse(
     (
       <div
@@ -19,8 +22,8 @@ export default function Image() {
           color: "white",
         }}
       >
-        <div style={{ fontSize: 34, color: "#a5b4fc" }}>Available for new projects</div>
-        <div style={{ fontSize: 88, fontWeight: 700, marginTop: 16 }}>Saber Ahmed</div>
+        <img src={`data:image/svg+xml;base64,${logo}`} width={281} height={64} alt="" />
+        <div style={{ fontSize: 88, fontWeight: 700, marginTop: 40 }}>Saber Ahmed</div>
         <div style={{ fontSize: 44, color: "#67e8f9", marginTop: 8 }}>
           React · Next.js · TypeScript · Three.js
         </div>
