@@ -27,13 +27,13 @@ export default function Skills() {
       id="skills"
       className="relative overflow-hidden bg-background px-6 py-24 lg:px-20"
     >
-      <div className="glow-blob right-0 top-20 h-72 w-72 bg-cyan-700/30" />
+      <div className="glow-blob right-0 top-20 h-72 w-72 bg-brand-2/20" />
       <div className="relative z-10 mx-auto max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-3 font-semibold text-indigo-300"
+          className="mb-3 font-semibold text-brand"
         >
           Technical Expertise
         </motion.p>
@@ -60,7 +60,7 @@ export default function Skills() {
               >
                 <div className="mb-4 flex items-center gap-3">
                   <span
-                    className={`grid h-11 w-11 place-items-center rounded-xl bg-linear-to-br ${group.accent} text-white`}
+                    className={`grid h-11 w-11 place-items-center rounded-xl bg-white/5 text-brand-2 ring-1 ring-white/10`}
                   >
                     <Icon className="h-5 w-5" />
                   </span>

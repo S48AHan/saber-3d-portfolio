@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #05060a;
+  --background: #0c0f1c;
   --foreground: #e8ebf5;
-  --accent: #6366f1;
+  --accent: #7d87ff;
   --accent-2: #22d3ee;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand: var(--accent);
+  --color-brand-2: var(--accent-2);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -53,7 +55,7 @@ body {
 
 /* Gradient text helper */
 .text-gradient {
-  background: linear-gradient(120deg, #818cf8 0%, #22d3ee 55%, #a78bfa 100%);
+  background: linear-gradient(120deg, var(--accent) 0%, var(--accent-2) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -70,7 +72,7 @@ body {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(140deg, rgba(129, 140, 248, 0.6), rgba(34, 211, 238, 0.15), transparent 60%);
+  background: linear-gradient(140deg, rgba(125, 135, 255, 0.6), rgba(34, 211, 238, 0.2), transparent 60%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -100,14 +102,14 @@ body {
 }
 
 ::selection {
-  background: rgba(99, 102, 241, 0.4);
+  background: rgba(125, 135, 255, 0.35);
 }
 
 /* Slim scrollbar */
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #05060a; }
+::-webkit-scrollbar-track { background: var(--background); }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#4f46e5, #0891b2);
+  background: linear-gradient(var(--accent), var(--accent-2));
   border-radius: 9999px;
-  border: 2px solid #05060a;
+  border: 2px solid var(--background);
 }

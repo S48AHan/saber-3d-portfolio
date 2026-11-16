@@ -3,7 +3,6 @@ export type Project = {
   description: string;
   technologies: string[];
   icon: string; // lucide icon name (resolved in component)
-  accent: string; // tailwind gradient classes
   link?: string;
 };
 
@@ -22,7 +21,6 @@ export const projects: Project[] = [
       "Google Maps",
     ],
     icon: "School",
-    accent: "from-sky-500 to-indigo-500",
     link: "https://www.alifaedtech.com/",
   },
   {
@@ -31,7 +29,6 @@ export const projects: Project[] = [
       "Built responsive UI and bilingual Bangla–English support for a public-facing government platform serving thousands of citizens.",
     technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn UI"],
     icon: "Landmark",
-    accent: "from-emerald-500 to-teal-500",
     link: "https://www.parliament.gov.bd/",
   },
   {
@@ -40,24 +37,22 @@ export const projects: Project[] = [
       "Built responsive frontend interfaces for a real-time sports auction platform using Laravel, Tailwind CSS, and PHP.",
     technologies: ["Laravel", "Tailwind CSS", "PHP"],
     icon: "Trophy",
-    accent: "from-amber-500 to-orange-500",
     link: "https://kakehashi-sports.com/",
   },
   {
     title: "Blink",
-    description: "Landing page for interactive 3D simulation model with ThreeJS.",
-    technologies: ["React", "ThreeJS", "Tailwind CSS"],
-    icon: "Mobile",
-    accent: "from-slate-400 to-slate-600",
+    description:
+      "Interactive 3D landing page for a simulation product, with scroll-driven animation built in React and Three.js.",
+    technologies: ["React", "Three.js", "Tailwind CSS"],
+    icon: "Rocket",
     link: "https://blink-scroll-homepage.vercel.app/",
   },
   {
     title: "Centralized Insurance Portal",
     description:
-      "Led frontend development for an insurance service management portal streamlining policy handling with ReactJS and JavaScript.",
-    technologies: ["ReactJS", "JavaScript"],
+      "Led frontend development of an insurance management portal that streamlines policy handling, built with React and JavaScript.",
+    technologies: ["React", "JavaScript"],
     icon: "ShieldCheck",
-    accent: "from-violet-500 to-purple-500",
     link: "https://github.com/S48AHan/clg_portal",
   },
   {
@@ -66,7 +61,6 @@ export const projects: Project[] = [
       "Created an interactive 3D Pokémon card game with immersive animations powered by Three.js and GSAP.",
     technologies: ["Three.js", "GSAP", "JavaScript"],
     icon: "Gamepad2",
-    accent: "from-cyan-500 to-blue-500",
     link: "https://github.com/S48AHan/PokemonCardGame",
   },
   {
@@ -75,7 +69,6 @@ export const projects: Project[] = [
       "Undergraduate thesis: a tamper-proof blockchain voting system built on Hyperledger Fabric with a React frontend and Solidity/Go smart contracts.",
     technologies: ["React", "Solidity", "Go", "Hyperledger Fabric"],
     icon: "Vote",
-    accent: "from-rose-500 to-pink-500",
     link: "https://github.com/h-razu/smart-voting",
   },
 
@@ -85,7 +78,6 @@ export const projects: Project[] = [
       "Desktop software to manage PC accessories inventory, built with JavaFX and backed by MS SQL Server.",
     technologies: ["Java", "JavaFX", "MS SQL Server"],
     icon: "MonitorCog",
-    accent: "from-slate-400 to-slate-600",
     link: "https://github.com/S48AHan/GadgetScape",
   },
   {
@@ -94,7 +86,6 @@ export const projects: Project[] = [
       "Inventory and sales management system for a grocery store, handling stock, billing, and reporting.",
     technologies: ["Java", "JavaFX", "MS SQL"],
     icon: "ShoppingCart",
-    accent: "from-green-500 to-emerald-500",
     link: "https://github.com/S48AHan/grocery-management",
   },
   {
@@ -103,7 +94,6 @@ export const projects: Project[] = [
       "Web-based courier and delivery management system developed with C# on the ASP.NET MVC framework.",
     technologies: ["C#", "ASP.NET MVC", "MS SQL"],
     icon: "Truck",
-    accent: "from-lime-500 to-emerald-500",
     link: "https://github.com/S48AHan/SpeedyCourier",
   },
   {
@@ -112,7 +102,6 @@ export const projects: Project[] = [
       "A relocation and logistics booking website for movers and packers, built with PHP, MySQL, HTML5 and Bootstrap.",
     technologies: ["PHP", "MySQL", "HTML5", "Bootstrap"],
     icon: "Package",
-    accent: "from-orange-500 to-red-500",
     link: "https://github.com/S48AHan/Movers-And-Packers",
   },
 
@@ -121,7 +110,6 @@ export const projects: Project[] = [
     description:
       "A fast-paced arcade runner game built from scratch in C++ using the iGraphics library.",
     technologies: ["C++", "iGraphics"],
-    icon: "Rocket",
-    accent: "from-fuchsia-500 to-indigo-500",
+    icon: "Gamepad2",
   },
 ];

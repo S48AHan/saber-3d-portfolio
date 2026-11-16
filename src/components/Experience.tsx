@@ -10,13 +10,13 @@ export default function Experience() {
       id="experience"
       className="relative overflow-hidden bg-background px-6 py-24 lg:px-20"
     >
-      <div className="glow-blob left-10 bottom-10 h-72 w-72 bg-violet-700/25" />
+      <div className="glow-blob left-10 bottom-10 h-72 w-72 bg-brand/20" />
       <div className="relative z-10 mx-auto max-w-4xl">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-3 font-semibold text-indigo-300"
+          className="mb-3 font-semibold text-brand"
         >
           Career Path
         </motion.p>
@@ -42,7 +42,7 @@ export default function Experience() {
               <span
                 className={`absolute -left-[41px] grid h-8 w-8 place-items-center rounded-full ring-4 ring-background ${
                   exp.current
-                    ? "bg-linear-to-br from-indigo-500 to-cyan-400 text-white"
+                    ? "bg-linear-to-br from-brand to-brand-2 text-background"
                     : "bg-white/10 text-slate-300"
                 }`}
               >
@@ -64,7 +64,7 @@ export default function Experience() {
                     </span>
                   )}
                 </div>
-                <p className="mb-3 text-sm text-indigo-300">
+                <p className="mb-3 text-sm text-brand">
                   {exp.company} · {exp.duration}
                 </p>
                 <p className="text-slate-400">{exp.description}</p>

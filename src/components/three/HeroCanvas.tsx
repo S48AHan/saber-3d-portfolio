@@ -150,7 +150,7 @@ function CoreGlow() {
     <mesh>
       <icosahedronGeometry args={[0.85, 2]} />
       <meshBasicMaterial
-        color="#4f46e5"
+        color="#7d87ff"
         wireframe
         transparent
         opacity={0.25}

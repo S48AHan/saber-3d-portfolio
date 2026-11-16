@@ -13,7 +13,7 @@ export default function Contact() {
       id="contact"
       className="relative overflow-hidden bg-background px-6 py-24 lg:px-20"
     >
-      <div className="glow-blob left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 bg-indigo-700/30" />
+      <div className="glow-blob left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 bg-brand/20" />
       <div className="relative z-10 mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -21,10 +21,10 @@ export default function Contact() {
           viewport={{ once: true }}
           className="card-glow overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-8 text-center lg:p-14"
         >
-          <p className="mb-3 font-semibold text-indigo-300">Get in touch</p>
+          <p className="mb-3 font-semibold text-brand">Work with me</p>
           <h2 className="mb-4 text-4xl font-bold text-white lg:text-5xl">
-            Let&apos;s build something{" "}
-            <span className="text-gradient">great</span>
+            Let&apos;s build your next{" "}
+            <span className="text-gradient">project</span>
           </h2>
           <p className="mx-auto mb-8 max-w-xl text-slate-300">
             Need help building your website, web app or product? I take on
@@ -35,7 +35,7 @@ export default function Contact() {
 
           <a
             href={`mailto:${EMAIL}`}
-            className="group inline-flex items-center gap-2 rounded-full bg-linear-to-r from-indigo-500 to-cyan-400 px-7 py-3.5 font-semibold text-white shadow-lg shadow-indigo-500/25 transition hover:shadow-indigo-500/40"
+            className="group inline-flex items-center gap-2 rounded-full bg-linear-to-r from-brand to-brand-2 px-7 py-3.5 font-semibold text-background shadow-lg shadow-brand/25 transition hover:shadow-brand/40"
           >
             <Mail className="h-5 w-5" />
             {EMAIL}

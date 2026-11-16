@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -55,6 +55,8 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   verification: { google: "Ma_26ZXkskeUI4WONSe1QYmVVHep8Do5HgCuZjmTdTE" },
 };
+
+export const viewport: Viewport = { themeColor: "#0c0f1c" };
 
 export default function RootLayout({
   children,

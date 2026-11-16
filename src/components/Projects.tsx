@@ -41,13 +41,13 @@ export default function Projects() {
       id="projects"
       className="relative overflow-hidden bg-background px-6 py-24 lg:px-20"
     >
-      <div className="glow-blob left-1/2 top-0 h-72 w-72 -translate-x-1/2 bg-indigo-700/40" />
+      <div className="glow-blob left-1/2 top-0 h-72 w-72 -translate-x-1/2 bg-brand/25" />
       <div className="relative z-10 mx-auto max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-3 font-semibold text-indigo-300"
+          className="mb-3 font-semibold text-brand"
         >
           Selected Work
         </motion.p>
@@ -55,10 +55,20 @@ export default function Projects() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 text-4xl font-bold text-white lg:text-5xl"
+          className="mb-4 text-4xl font-bold text-white lg:text-5xl"
         >
           Featured <span className="text-gradient">Projects</span>
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12 max-w-2xl text-lg text-slate-400"
+        >
+          Websites and web applications I&apos;ve built for clients, employers
+          and my own R&amp;D — spanning government, education, commerce and
+          interactive 3D.
+        </motion.p>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {projects.map((project, i) => {
@@ -86,7 +96,7 @@ export default function Projects() {
               >
                 <div className="mb-5 flex items-start justify-between">
                   <span
-                    className={`grid h-12 w-12 place-items-center rounded-xl bg-linear-to-br ${project.accent} text-white shadow-lg`}
+                    className={`grid h-12 w-12 place-items-center rounded-xl bg-white/5 text-brand-2 ring-1 ring-white/10`}
                   >
                     <Icon className="h-6 w-6" />
                   </span>
